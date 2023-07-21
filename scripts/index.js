@@ -33,10 +33,8 @@ const section_container= document.querySelector(".section_container");
 
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", (e)=> {
-  // e.preventDefault();
-  // e.stopPropagation();
-  call_api_fetch();
+btn.addEventListener("click", ()=> {
+    call_api_fetch();
 
 } )
 
