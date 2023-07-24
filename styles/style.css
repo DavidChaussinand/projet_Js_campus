@@ -105,6 +105,7 @@ a{
     object-position: top;
 
 }
+
 .gallery_mosaique{
     display: flex;
     flex-wrap: wrap;
@@ -118,10 +119,29 @@ a{
     object-position: top;
     margin-bottom: 10px;
 }
+
+.gallery_colonne img {
+    height: 350px;
+    width: 98%;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 10px;
+}
+
+
 @media (min-width: 576px) {
     .gallery_mosaique img{
         height: 280px;
         min-width: 280px;
+    }
+    .width_gallery{
+        width: 90%;
+        margin: 0 auto;
+      
+    }
+    .gallery_colonne img {
+        height: 350px;
+       
     }
 
 }
@@ -129,6 +149,18 @@ a{
 @media (min-width: 768px) {
     .gallery_caroussel img{
         height: 450px;    
+    }
+  }
+
+@media (min-width: 1000px) {
+    .width_gallery{
+        width: 70%;
+        margin: 0 auto;
+      
+    }
+    .gallery_colonne img {
+        height: 550px;
+       
     }
   }
 
@@ -177,6 +209,11 @@ a{
 .styled2:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+
+
+
+
+
 
 /* ************************ fin button gallery ************************/
 
