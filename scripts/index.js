@@ -6,16 +6,13 @@ function call_api_fetch(){
   .then(reponse => reponse.json())
   .then(json => {
 
-        for (let i = 0 ; i<3;i++){
+        for (let i = 0 ; i<4;i++){
  
             const newArticle = document.createElement("article");
-
             let newTitle =create_tag("h1", json[i].title);
             let NewParagraphe = create_tag("p", json[i].body);
-
             newArticle.appendChild(newTitle);
             newArticle.appendChild(NewParagraphe);
-
             section_container.appendChild(newArticle);
         }
         
@@ -34,8 +31,12 @@ const section_container= document.querySelector(".section_container");
 const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", ()=> {
-    call_api_fetch();
+    const article = document.querySelector('article');
+    article.lastChild.remove();
 
 } )
 
 call_api_fetch();
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+});

@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet JS campus</title>
+    <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <header class="header">
-
-        <div class=" header_logo">
-            <img src="images/iron.avif" alt=""> 
-            <h4> Stark industrie</h4>
-        </div>
-        <nav class="header_menu">
+    <header class="">
+        <nav class="header_menu" id="nav">
+            <div class=" header_logo">
+                <img src="images/iron.avif" alt=""> 
+                <h4> Stark industrie </h4>
+            </div>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html">Accueil  </a></li>
               <li><a href="pages/gallery.html">Gallery</a></li>
               <li><a href="pages/jeux.html">Jeux</a></li>
             </ul>
+            <div id="icons"></div>
         </nav>
     </header>
     <h1> welcome</h1>
 
     <hr>
     <button class="styled btn" type="button">
-        actualiser
+        supprimer
     </button>
     
     <section class="section"> 
@@ -42,14 +43,10 @@
         
     </section>
 
-    <form action="" method="post" class="form-example">
+    <form action="" method="post" class="form-example" id="article-form">
         <div class="form-example">
           <label for="title">Votre titre </label>
           <input type="text" name="title" id="title" required>
-        </div>
-        <div class="form-example">
-          <label for="name">Votre nom </label>
-          <input type="text" name="name" id="name" required>
         </div>
         <div class="form-example">
             <label for="content">votre contenu</label>
@@ -79,5 +76,8 @@
 
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/burger.js"></script>
+    <script src="scripts/addArticles.js"></script>
+    
 </body>
 </html>
