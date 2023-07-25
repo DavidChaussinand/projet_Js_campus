@@ -42,7 +42,10 @@ call_api_fetch();
 
 const section_container= document.querySelector(".section_container");
 
+
+/****************** Supprimer un article ***************************/
 const btn = document.querySelector(".btn");
+
 btn.addEventListener("click", ()=> {
     const article = document.querySelector('article');
     article.removeChild(article.children[0]);
