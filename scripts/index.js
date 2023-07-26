@@ -2,24 +2,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 });
 
-
-function call_api_fetch(){
-  return fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(reponse => reponse.json())
-  .then(json => {
-
-        for (let i = 0 ; i<4 ;i++){
- 
-            createArticles(json[i].title ,json[i].body);
-            // let newTitle =create_tag("h1", json[i].title);
-            // let NewParagraphe = create_tag("p", json[i].body);
-        }
-        
-      })
-      .catch(error => alert("Erreur :" + error))
+function call_api_fetch() {
+  return fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((reponse) => reponse.json())
+    .then((json) => {
+      for (let i = 0; i < 4; i++) {
+        createArticles(json[i].title, json[i].body);
+        // let newTitle =create_tag("h1", json[i].title);
+        // let NewParagraphe = create_tag("p", json[i].body);
+      }
+    })
+    .catch((error) => alert("Erreur :" + error));
 }
 
-function create_tag(baliseHtml,content){
+function create_tag(baliseHtml, content) {
   let tag = document.createElement(baliseHtml);
   tag.innerText = content;
   return tag;
@@ -32,44 +28,30 @@ function createArticles(title, content) {
   newTitle.textContent = title;
   newContent.textContent = content;
   newArticle.appendChild(newTitle);
-  newArticle.appendChild(newContent); 
+  newArticle.appendChild(newContent);
   section_container.appendChild(newArticle);
-  
 }
 
 call_api_fetch();
 
+const section_container = document.querySelector(".section_container");
 
-const section_container= document.querySelector(".section_container");
+/*********************************  ajout d'un article *********************************************************************/
+const forms = document.getElementById("article-form");
 
+forms.addEventListener("submit", (event) => {
+  event.preventDefault(); // Empêcher le comportement par défaut du formulaire (rechargement de la page)
+  const title = document.getElementById("title").value;
+  const content = document.getElementById("content").value;
+  createArticles(title, content);
+  document.getElementById("title").value = "";
+  document.getElementById("content").value = "indiquez votre contenu";
+});
 
 /****************** Supprimer un article ***************************/
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", ()=> {
-    const article = document.querySelector('article');
-    article.removeChild(article.children[0]);
-
-} )
-
-
-
-/*********************************  ajout d'un article *********************************************************************/ 
-const forms = document.getElementById("article-form");
-
-forms.addEventListener("submit", (event) => {
-    event.preventDefault(); // Empêcher le comportement par défaut du formulaire (rechargement de la page)
-    const title = document.getElementById("title").value;
-    const content = document.getElementById("content").value;
-    createArticles(title, content);
-    document.getElementById("title").value="";
-    document.getElementById("content").value="indiquez votre contenu";
-})
-
-/*********************************  fin d'un article *********************************************************************/ 
-
-
-
-
-
-
+btn.addEventListener("click", () => {
+  const article = document.querySelector("article");
+  article.removeChild(article.children[0]);
+});

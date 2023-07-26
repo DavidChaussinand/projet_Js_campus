@@ -1,99 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet JS campus</title>
     <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
     <header class="">
-        <nav class="header_menu" id="nav">
-            <div class=" header_logo">
-                <img src="../images/iron.avif" alt=""> 
-                <h4> Stark industrie </h4>
-            </div>
-            <ul>
-              <li><a href="../index.html">Accueil  </a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="jeux.html">Jeux</a></li>
-            </ul>
-            <div id="icons"></div>
-        </nav>
+      <nav class="header_menu" id="nav">
+        <div class="header_logo">
+          <img src="../images/iron.avif" alt="" />
+          <h4>Stark industrie</h4>
+        </div>
+        <ul>
+          <li><a href="../index.html">Accueil </a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="jeux.html">Jeux</a></li>
+        </ul>
+        <div id="icons"></div>
+      </nav>
     </header>
 
-    <h1> gallery</h1>
-    <hr>
-
-    <div class="gallery_caroussel">
-        ICI LE CARROUSEL
-        <img src="../images/caroussel.jpg" alt=""> 
-        FIN CARROUSEL
-    </div>
+    <h1>gallery</h1>
+    <hr />
+    
+    <div class="gallery_slider_container">
+        <div class="slide active">
+          <img src="../images/Deadpool4.png" alt="" />
+        </div>
+        <div class="slide ">
+          <img src="../images/Deadpool3.png" alt="" />
+        </div>
+        <div class="slide ">
+          <img src="../images/Batman_908.jpg" alt="" />
+        </div>
+      </div>
+      
+   
 
     <form action="" class="" id="image">
-        <label for="url">Enter an https:// URL:</label>
+      <label for="url">Enter an https:// URL:</label>
+      <input
+        type="text"
+        name="url"
+        id="url"
+        placeholder="https://example.com"
+        pattern="https://.*"
+        size="30"
+      />
+      <span class="error_msg"
+        >Choisissez un url valide qui commence par http ou https</span
+      >
 
-        <input type="url" name="url" id="url"
-            placeholder="https://example.com"
-            pattern="https://.*" size="30"
-            required>
-        <div class="form-example">
-          <input type="submit" value="valider">
-        </div>   
-   
+      <div class="form-example">
+        <input type="submit" value="valider" />
+      </div>
     </form>
 
-    <button class="btn_delete" type="button">
-        supprimer image
-    </button>
+    <button class="btn_delete" type="button">Supprimer image</button>
 
     <div class="gallery_button_container">
-        <button class="styled mosaique" type="button">
-            Mode mosaique
-        </button>
-        <button class="styled colonne" type="button">
-            Mode colonne
-        </button>
+      <button class="styled mosaique" type="button">Mode mosaique</button>
+      <button class="styled colonne" type="button">Mode colonne</button>
     </div>
 
-    
-     <section id="test" class="add_image gallery_mosaique gallery_colonne width_gallery" > 
-        
-            <img class="delete_img" src="../images/caroussel.jpg" alt=""> 
-            <img src="../images/deadpool2.jpg" alt=""> 
-            <img src="../images/caroussel.jpg" alt=""> 
-            <img class="delete_img" src="../images/deadpool.jpg" alt=""> 
-            <img src="../images/iron.avif" alt=""> 
-            <img src="../images/caroussel.jpg" alt=""> 
-            <img src="../images/deadpool2.jpg" alt=""> 
-            <img src="../images/batman.jpg" alt=""> 
-            <img src="../images/caroussel.jpg" alt=""> 
-            <img src="../images/caroussel.jpg" alt=""> 
-            <img src="../images/deadpool.jpg" alt=""> 
-        
-
+    <section
+      id="test"
+      class="add_image gallery_mosaique gallery_colonne width_gallery"
+    >
+      <img src="../images/caroussel.jpg" alt="" />
+      <img src="../images/deadpool2.jpg" alt="" />
+      <img src="../images/caroussel.jpg" alt="" />
+      <img src="../images/deadpool.jpg" alt="" />
+      <img src="../images/iron.avif" alt="" />
+      <img src="../images/caroussel.jpg" alt="" />
+      <img src="../images/deadpool2.jpg" alt="" />
+      <img src="../images/batman.jpg" alt="" />
+      <img src="../images/caroussel.jpg" alt="" />
+      <img src="../images/caroussel.jpg" alt="" />
+      <img src="../images/deadpool.jpg" alt="" />
     </section>
 
-
-   
-
     <footer class="footer">
-        <p>Star industrie</p>
-        <p> 1440 W Chicago Blvd #1100</p>
-        <p> Tecumseh, MI 49286</p>
-            
-        <p>   (517) 902-7851</p>
-        <p>   info@artonicweb.com</p>
+      <p>Star industrie</p>
+      <p>1440 W Chicago Blvd #1100</p>
+      <p>Tecumseh, MI 49286</p>
+
+      <p>(517) 902-7851</p>
+      <p>info@artonicweb.com</p>
     </footer>
 
-
-
-
-    
     <script src="../scripts/burger.js"></script>
     <script src="../scripts/gallery.js"></script>
-</body>
+
+
+  </body>
 </html>
