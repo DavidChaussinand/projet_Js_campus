@@ -8,18 +8,12 @@ function call_api_fetch() {
     .then((json) => {
       for (let i = 0; i < 4; i++) {
         createArticles(json[i].title, json[i].body);
-        // let newTitle =create_tag("h1", json[i].title);
-        // let NewParagraphe = create_tag("p", json[i].body);
       }
     })
     .catch((error) => alert("Erreur :" + error));
 }
 
-function create_tag(baliseHtml, content) {
-  let tag = document.createElement(baliseHtml);
-  tag.innerText = content;
-  return tag;
-}
+
 
 function createArticles(title, content) {
   const newArticle = document.createElement("article");

@@ -297,6 +297,20 @@ a {
   font-size: 25px;
 }
 
+.show {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight:600;
+  text-transform: uppercase;
+}
+.win{
+  content :"\2655"
+}
+
+.lost{
+  content : "\2694"
+}
 
 @media (min-width: 576px) {
   .styled2 {

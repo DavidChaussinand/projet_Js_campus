@@ -38,7 +38,7 @@ btn_delete.addEventListener("click", () => {
   const section = document.getElementById("test");
   // Récupérer toutes les images de la section avec la classe "delete_img"
   const delete_img = section.querySelectorAll("img.delete_img");
-  console.log(delete_img);
+  
   if (delete_img.length > 0) {
     delete_img[0].remove();
   } else {
